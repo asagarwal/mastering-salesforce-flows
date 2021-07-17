@@ -1,5 +1,5 @@
 Order_Update__e orderUpdateEvent = new Order_Update__e() ;
-orderUpdateEvent.Opportunity_Record_ID__c = '0067F000004x1TCQAY' ;
+orderUpdateEvent.Opportunity_Record_ID__c = '<OpportunityRecordId>' ;
 orderUpdateEvent.Order_Number__c = '792631' ;
 orderUpdateEvent.Order_Status__c = 'Shipped' ;
 orderUpdateEvent.Tracking_Number__c = '8241096275109' ;
