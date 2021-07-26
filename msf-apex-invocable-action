@@ -1,0 +1,10 @@
+public class LockClosedOpportunity {
+
+    @InvocableMethod(label='Lock Closed Opportunity' description='Locks the closed opportunity to prevent it from further editing')
+    public static List<Boolean> lockOpportunity(List<Opportunity> opportunityList) {
+        Approval.LockResult[] lrList = Approval.lock(OpportunityList, false);
+        List<Boolean> lockResult = new List<Boolean>() ;
+        lockresult.add(true);
+        return lockResult;
+    }
+}
