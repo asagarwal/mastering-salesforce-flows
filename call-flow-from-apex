@@ -1,0 +1,13 @@
+// Get the Account Id
+Account accountRec = [Select Id From Account Where Name = '<Specify Account Name>' LIMIT 1];
+Id accountId = accountRec.Id ;
+ 
+// Call Flow & pass Account Id
+Map<String, Id> params = new Map<String, Id>();
+params.put('recordId', accountId) ;
+Flow.Interview.Rollup_Open_Case_Count_on_Account countCaseonAccount = new Flow.Interview.Rollup_Open_Case_Count_on_Account(params);
+countCaseonAccount.start();
+ 
+// Get value from the Flow
+Decimal NumberOfOpenCases = (Decimal)countCaseonAccount.getVariableValue('CaseCount');
+System.debug('Open Cases for Account: ' + NumberOfOpenCases);
