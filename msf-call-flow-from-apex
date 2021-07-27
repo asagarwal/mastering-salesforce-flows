@@ -9,5 +9,5 @@ Flow.Interview.Rollup_Open_Case_Count_on_Account countCaseonAccount = new Flow.I
 countCaseonAccount.start();
  
 // Get value from the Flow
-Decimal NumberOfOpenCases = (Decimal)countCaseonAccount.getVariableValue('CaseCount');
+Decimal NumberOfOpenCases = (Decimal)countCaseonAccount.getVariableValue('CaseCounter');
 System.debug('Open Cases for Account: ' + NumberOfOpenCases);
