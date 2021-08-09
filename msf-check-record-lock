@@ -1,0 +1,1 @@
+System.Debug('Is Record Locked: ' + approval.isLocked('<OpportunityId>')) ;
