@@ -1,10 +1,20 @@
 public class LockClosedOpportunity {
 
-    @InvocableMethod(label='Lock Closed Opportunity' description='Locks the closed opportunity to prevent it from further editing')
+    @InvocableMethod(label='Lock Closed Opportunity' description='Locks the closed opportunity to prevent it from further editing')    
     public static List<Boolean> lockOpportunity(List<Opportunity> opportunityList) {
-        Approval.LockResult[] lrList = Approval.lock(OpportunityList, false);
+        
+        // lock the Opportunity Record
+        Approval.LockResult[] lrList = Approval.lock(opportunityList, false);
+        
+        // Create a list to store the lock results
         List<Boolean> lockResult = new List<Boolean>() ;
-        lockresult.add(true);
+        
+        // Assign lockResult to the List
+        for(Approval.LockResult lr : lrList) {
+            lockresult.add(lr.isSuccess());
+        }
+        
+        // Return List back to Flows
         return lockResult;
     }
 }
